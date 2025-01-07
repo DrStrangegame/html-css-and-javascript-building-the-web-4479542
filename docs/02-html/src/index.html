@@ -7,10 +7,12 @@
     ensuring that text is displayed correctly. Using UTF-8 is standard practice bcuz it supports wide range of characters and symbols-->
     <meta name="viewport", content="width=device-width, initial-scale=1">  <!-- multiple attributes used here. Each one needs to be separated
     by a comma. These particular attributes -->
-    <link>  <!-- no closing tag for this type of tag -->
-    <script> </script>  <!-- used to link javascript file -->
-  
-
+    <link rel="stylesheet", href="">  <!-- no closing tag for this type of tag. Rel attribute specifies the relationship as a stylesheet
+    and the href attribute procides the path to the CSS file-->
+    <script src="" defer></script>  <!-- used to link javascript file. SRC attribute specifies the path to the script. This will be the script file
+    we later reference in Javascript.Defer attribute ensures the script loads after the HTML is fully loaded and parsed, which helps improve page
+     load speed and performance. These attributes do not follow normal rules of using a comma to separate them.-->
+    </head>
     <body>
       <h1>My Terrarium</h1>
       <div> <!-- Container that wraps all of our content. It is used to group content -->
@@ -19,8 +21,8 @@
         </div>
       </div>
     </body>
-  </head>
 </html>
+
 
 
 <!--
