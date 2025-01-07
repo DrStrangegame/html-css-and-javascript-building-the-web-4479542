@@ -9,21 +9,43 @@
     by a comma. These particular attributes -->
     <link rel="stylesheet", href="">  <!-- no closing tag for this type of tag. Rel attribute specifies the relationship as a stylesheet
     and the href attribute procides the path to the CSS file-->
-    <script src="" defer></script>  <!-- Script is used to link javascript file. SRC attribute specifies the path to the script. This will be the script file
+    <script src="" defer></script>  <!-- Script tag is used to link javascript file. SRC attribute specifies the path to the script. This will be the script file
     we later reference in Javascript.Defer attribute ensures the script loads after the HTML is fully loaded and parsed, which helps improve page
      load speed and performance. These attributes do not follow normal rules of using a comma to separate them.-->
     </head>
     <body>
       <h1>My Terrarium</h1>
-      <div id="page">        <!-- Div is a Container that wraps all of our content, or is used to group content. The "id" attribute uniquely
+      <div id="page">        <!-- Div is a Container tag that wraps all of our content, or is used to group content. The "id" attribute uniquely
         identifies an element, which is useful for applying specific styles in CSS and targeting it with JavaScript.-->
         <div class="container">   <!-- another container, will serve as a holder for plant images. The "class" attibute allows us to apply the same
           styles to multiple elements. -->
           <div class="plant-holder">
-            <img class="plant" id="plant1" src="./images/plant1.png">   <!-- image is inside of a div (container)-->
+            <img class="plant" id="plant1"  alt="a small plant" src="./images/plant1.png">   <!-- image tag is inside of a div (container)
+            "alt" attribute is used for description of image to visually impaired person on our website-->
           </div>
           <div class="plant-holder">  <!-- I copied the div above and pasted below for image 2-->
-            <img class="plant" id="plant2" src="./images/plant2.png"> <!-- image is inside of a div (container)-->
+            <img class="plant" id="plant2" alt="a small cactus plant" src="./images/plant2.png"> <!-- image tag is inside of a div (container). 
+            "alt" attribute is used for description of image to visually impaired person on our website-->
+          </div>
+          <div class="plant-holder"> <!-- I copied the div above and pasted below for image 3-->
+            <img class="plant" id="plant3" alt="a small cactus plant" src="./images/plant3.png"> <!-- image tag is inside of a div (container). 
+                      "alt" attribute is used for description of image to visually impaired person on our website-->
+          </div>
+          <div class="plant-holder"> <!-- I copied the div above and pasted below for image 4-->
+            <img class="plant" id="plant4" alt="a small cactus plant" src="./images/plant4.png"> <!-- image tag is inside of a div (container). 
+                      "alt" attribute is used for description of image to visually impaired person on our website-->
+          </div>
+          <div class="plant-holder"> <!-- I copied the div above and pasted below for image 5-->
+            <img class="plant" id="plant5" alt="a small cactus plant" src="./images/plant5.png"> <!-- image tag is inside of a div (container). 
+                      "alt" attribute is used for description of image to visually impaired person on our website-->
+          </div>
+          <div class="plant-holder"> <!-- I copied the div above and pasted below for image 6-->
+            <img class="plant" id="plant6" alt="a small cactus plant" src="./images/plant6.png"> <!-- image tag is inside of a div (container). 
+                      "alt" attribute is used for description of image to visually impaired person on our website-->
+          </div>
+          <div class="plant-holder"> <!-- I copied the div above and pasted below for image 7-->
+            <img class="plant" id="plant7" alt="a small cactus plant" src="./images/plant7.png"> <!-- image tag is inside of a div (container). 
+                      "alt" attribute is used for description of image to visually impaired person on our website-->
           </div>
         </div>
       </div>
