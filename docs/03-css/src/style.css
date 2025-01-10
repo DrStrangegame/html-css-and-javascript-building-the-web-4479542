@@ -6,6 +6,10 @@ body {
 h1 {
 	color: #3508fa;
 	text-align: center;
+	/* below, I am using an inline font-family so that I dont inherit the one for the body shown above.
+	The reason I would inherit the "body" font-family normally is because "h1" is created as a child of the "body"
+	in the index.html file. */
+	font-family: "Lobster", cursive;
 }
 /*
 #left-container {
