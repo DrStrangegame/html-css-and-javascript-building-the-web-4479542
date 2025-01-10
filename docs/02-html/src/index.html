@@ -1,86 +1,163 @@
 <!DOCTYPE html>
-<html lang="en">  <!-- language attribute that specifies English. Attributes go at the end of tags and are used to specify
+<html lang="en">
+  <!-- language attribute that specifies English. Attributes go at the end of tags and are used to specify
   properties like character encoding, viewport settings, IDs, classes, and alternative texts for accessibility  -->
   <head>
-    <title>Welcome to my Virtual Terrarium</title>  <!-- This is the title of the tab for the webpage -->
-    <meta charset="utf-8">  <!-- no closing tag for this type of tag. Charset UTF-8 attribute specifies the character encoding for a document, 
+    <title>Welcome to my Virtual Terrarium</title>
+    <!-- This is the title of the tab for the webpage -->
+    <meta charset="utf-8" />
+    <!-- no closing tag for this type of tag. Charset UTF-8 attribute specifies the character encoding for a document, 
     ensuring that text is displayed correctly. Using UTF-8 is standard practice bcuz it supports wide range of characters and symbols-->
-    <meta name="viewport", content="width=device-width, initial-scale=1">  <!-- multiple attributes used here. Each one needs to be separated
+    <meta name="viewport" , content="width=device-width, initial-scale=1" />
+    <!-- multiple attributes used here. Each one needs to be separated
     by a comma. These particular attributes -->
-    <link rel="stylesheet", href="">  <!-- no closing tag for this type of tag. Rel attribute specifies the relationship as a stylesheet
+    <link rel="stylesheet" , href="" />
+    <!-- no closing tag for this type of tag. Rel attribute specifies the relationship as a stylesheet
     and the href attribute procides the path to the CSS file-->
-    <script src="" defer></script>  <!-- Script tag is used to link javascript file. SRC attribute specifies the path to the script. This will be the script file
+    <script src="" defer></script>
+    <!-- Script tag is used to link javascript file. SRC attribute specifies the path to the script. This will be the script file
     we later reference in Javascript.Defer attribute ensures the script loads after the HTML is fully loaded and parsed, which helps improve page
      load speed and performance. These attributes do not follow normal rules of using a comma to separate them.-->
-    </head>
-    <body>
-      <h1>My Terrarium</h1>
-      <div id="page">        <!-- Div is a Container tag that wraps all of our content, or is used to group content. The "id" attribute uniquely
+  </head>
+  <body>
+    <h1>My Terrarium</h1>
+    <div id="page">
+      <!-- Div is a Container tag that wraps all of our content, or is used to group content. The "id" attribute uniquely
         identifies an element, which is useful for applying specific styles in CSS and targeting it with JavaScript.-->
-        <div id="left-container" class="container">   <!-- another container with an Id given to it, will serve as a holder for plant images. The "class" attibute allows us to apply the same
+      <div id="left-container" class="container">
+        <!-- another container with an Id given to it, will serve as a holder for plant images. The "class" attibute allows us to apply the same
           styles to multiple elements. -->
-          <div class="plant-holder">
-            <img class="plant" id="plant1"  alt="a small plant" src="./images/plant1.png">   <!-- image tag is inside of a div (container)
+        <div class="plant-holder">
+          <img
+            class="plant"
+            id="plant1"
+            alt="a small plant"
+            src="./images/plant1.png"
+          />
+          <!-- image tag is inside of a div (container)
             "alt" attribute is used for description of image to visually impaired person on our website-->
-          </div>
-          <div class="plant-holder">  <!-- I copied the div above and pasted below for image 2-->
-            <img class="plant" id="plant2" alt="a small cactus plant" src="./images/plant2.png"> <!-- image tag is inside of a div (container). 
-            "alt" attribute is used for description of image to visually impaired person on our website-->
-          </div>
-          <div class="plant-holder"> <!-- I copied the div above and pasted below for image 3-->
-            <img class="plant" id="plant3" alt="a small pink plant" src="./images/plant3.png"> <!-- image tag is inside of a div (container). 
-                      "alt" attribute is used for description of image to visually impaired person on our website-->
-          </div>
-          <div class="plant-holder"> <!-- I copied the div above and pasted below for image 4-->
-            <img class="plant" id="plant4" alt="a small lush plant" src="./images/plant4.png"> <!-- image tag is inside of a div (container). 
-                      "alt" attribute is used for description of image to visually impaired person on our website-->
-          </div>
-          <div class="plant-holder"> <!-- I copied the div above and pasted below for image 5-->
-            <img class="plant" id="plant5" alt="a long plant" src="./images/plant5.png"> <!-- image tag is inside of a div (container). 
-                      "alt" attribute is used for description of image to visually impaired person on our website-->
-          </div>
-          <div class="plant-holder"> <!-- I copied the div above and pasted below for image 6-->
-            <img class="plant" id="plant6" alt="a medium size plant" src="./images/plant6.png"> <!-- image tag is inside of a div (container). 
-                      "alt" attribute is used for description of image to visually impaired person on our website-->
-          </div>
-          <div class="plant-holder"> <!-- I copied the div above and pasted below for image 7-->
-            <img class="plant" id="plant7" alt="a large succulent plant" src="./images/plant7.png"> <!-- image tag is inside of a div (container). 
-                      "alt" attribute is used for description of image to visually impaired person on our website-->
-          </div>
         </div>
-
-        <div id="right-container" class="container">   <!-- another container with an Id given to it, will serve as a holder for plant images. The "class" attibute allows us to apply the same
-          styles to multiple elements. -->
-          <div class="plant-holder">
-            <img class="plant" id="plant8"  alt="a small plant" src="./images/plant8.png">   <!-- image tag is inside of a div (container)
-            "alt" attribute is used for description of image to visually impaired person on our website-->
-          </div>
-          <div class="plant-holder">  <!-- I copied the div above and pasted below for image 9-->
-            <img class="plant" id="plant9" alt="a small cactus plant" src="./images/plant9.png"> <!-- image tag is inside of a div (container). 
-            "alt" attribute is used for description of image to visually impaired person on our website-->
-          </div>
-          <div class="plant-holder"> <!-- I copied the div above and pasted below for image 10-->
-            <img class="plant" id="plant10" alt="a small pink plant" src="./images/plant10.png"> <!-- image tag is inside of a div (container). 
-                      "alt" attribute is used for description of image to visually impaired person on our website-->
-          </div>
-          <div class="plant-holder"> <!-- I copied the div above and pasted below for image 11-->
-            <img class="plant" id="plant11" alt="a small lush plant" src="./images/plant11.png"> <!-- image tag is inside of a div (container). 
-                      "alt" attribute is used for description of image to visually impaired person on our website-->
-          </div>
-          <div class="plant-holder"> <!-- I copied the div above and pasted below for image 12-->
-            <img class="plant" id="plant12" alt="a long plant" src="./images/plant12.png"> <!-- image tag is inside of a div (container). 
-                      "alt" attribute is used for description of image to visually impaired person on our website-->
-          </div>
-          <div class="plant-holder"> <!-- I copied the div above and pasted below for image 13-->
-            <img class="plant" id="plant13" alt="a medium size plant" src="./images/plant13.png"> <!-- image tag is inside of a div (container). 
-                      "alt" attribute is used for description of image to visually impaired person on our website-->
-          </div>
-          <div class="plant-holder"> <!-- I copied the div above and pasted below for image 14-->
-            <img class="plant" id="plant14" alt="a large succulent plant" src="./images/plant14.png"> <!-- image tag is inside of a div (container). 
-                      "alt" attribute is used for description of image to visually impaired person on our website-->
-          </div>
+        <div class="plant-holder">
+          <img
+            class="plant"
+            id="plant2"
+            alt="a small cactus plant"
+            src="./images/plant2.png"
+          />
+        </div>
+        <div class="plant-holder">
+          <img
+            class="plant"
+            id="plant3"
+            alt="a small pink plant"
+            src="./images/plant3.png"
+          />
+        </div>
+        <div class="plant-holder">
+          <img
+            class="plant"
+            id="plant4"
+            alt="a small lush plant"
+            src="./images/plant4.png"
+          />
+        </div>
+        <div class="plant-holder">
+          <img
+            class="plant"
+            id="plant5"
+            alt="a long plant"
+            src="./images/plant5.png"
+          />
+        </div>
+        <div class="plant-holder">
+          <img
+            class="plant"
+            id="plant6"
+            alt="a medium size plant"
+            src="./images/plant6.png"
+          />
+        </div>
+        <div class="plant-holder">
+          <img
+            class="plant"
+            id="plant7"
+            alt="a large succulent plant"
+            src="./images/plant7.png"
+          />
+        </div>
       </div>
-    </body>
+
+      <div id="right-container" class="container">
+        <!-- another container with an Id given to it, will serve as a holder for plant images. The "class" attibute allows us to apply the same
+          styles to multiple elements. -->
+        <div class="plant-holder">
+          <img
+            class="plant"
+            id="plant8"
+            alt="a small plant"
+            src="./images/plant8.png"
+          />
+        </div>
+        <div class="plant-holder">
+          <img
+            class="plant"
+            id="plant9"
+            alt="a small cactus plant"
+            src="./images/plant9.png"
+          />
+        </div>
+        <div class="plant-holder">
+          <img
+            class="plant"
+            id="plant10"
+            alt="a small pink plant"
+            src="./images/plant10.png"
+          />
+        </div>
+        <div class="plant-holder">
+          <img
+            class="plant"
+            id="plant11"
+            alt="a small lush plant"
+            src="./images/plant11.png"
+          />
+        </div>
+        <div class="plant-holder">
+          <img
+            class="plant"
+            id="plant12"
+            alt="a long plant"
+            src="./images/plant12.png"
+          />
+        </div>
+        <div class="plant-holder">
+          <img
+            class="plant"
+            id="plant13"
+            alt="a medium size plant"
+            src="./images/plant13.png"
+          />
+        </div>
+        <div class="plant-holder">
+          <img
+            class="plant"
+            id="plant14"
+            alt="a large succulent plant"
+            src="./images/plant14.png"
+          />
+        </div>
+      </div>
+      <div id="terrarium">
+        <div class="jar-top"></div>
+        <div class="jar-walls">
+          <div class="jar-glossy-long"></div>
+          <div class="jar-glossy-short"></div>
+          <div class="dirt"></div>
+          <div class="jar-bottom"></div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
 
 
