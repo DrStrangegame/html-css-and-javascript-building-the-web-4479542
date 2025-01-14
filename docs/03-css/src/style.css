@@ -11,13 +11,17 @@ h1 {
 	in the index.html file. */
 	font-family: "Lobster", cursive;
 }
-/*
+
+h1:hover {
+	color: hotpink;
+}
+
 #left-container {
-	left: 0px;
+	left: 0px;  /* 0 pixels away from left edge  */
 }
 
 #right-container {
-	right: 0px;
+	right: 0px; /* 0 pixels away from right edge  */
 }
 
 .container {
@@ -50,8 +54,9 @@ h1 {
 	position: absolute;
 	bottom: 0.5%;
 	left: 20%;
-	opacity: 0.5;
-	z-index: 1;
+	opacity: 0.5;   /* make more opaque (see through) or less  */
+	z-index: 1;    /*  Can be 1 or -1. If negative, it makes the element go behind an existing element. If positive, then it
+	will be in front of an existing item (not blocked), like the page itself (the existing item).  */
 }
 
 .jar-top {
@@ -90,7 +95,7 @@ h1 {
 .jar-glossy-long {
 	width: 3%;
 	height: 20%;
-	border-radius: 2rem;
+	border-radius: 2rem;  /* curvature of the border   */
 	background: #ddfbff;
 	position: absolute;
 	bottom: 20%;
@@ -105,4 +110,4 @@ h1 {
 	position: absolute;
 	bottom: 45%;
 	left: 5%;
-} */
+}
