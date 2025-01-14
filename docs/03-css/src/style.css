@@ -24,9 +24,11 @@ h1:hover {
 	right: 0px; /* 0 pixels away from right edge  */
 }
 
-.container {
+.container {  /* this is the containers for both left and right for the plants  */
 	background-color: #eee;
-	width: 15%;
+	width: 15%;   /* ex: 15% - percentage used, since its a percentage of the total area. This works well if someone uses a smart phone
+	or table to view, since it automatically adjusts based on the percentage. If you try using px (such as 250px), it would look 
+	good on a webpage, but horrible on a phone.*/
 	top: 0px;
 	position: absolute;
 	height: 100%;
@@ -41,7 +43,7 @@ h1:hover {
 	left: -10px;     /* moving away from it's relative ancestor by that amount */
 }
 
-.plant {
+.plant {    /* This is styling the plant pic and box, since the pic is basically a box with a plant  */
 	position: absolute;
 	max-width: 150%;
 	max-height: 150%;
@@ -112,4 +114,31 @@ h1:hover {
 	position: absolute;
 	bottom: 45%;
 	left: 5%;
+}
+
+/*Define an animation to use */
+@keyframes slide-in {
+	0% {
+		transform: translateX(-100%);  /* sliding in from the far left (off screen)  */
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+/* Apply the animation to an element */
+.plant {
+	animation: slide-in 2s ease-in-out;   /* ease-in-out means it starts slow, accelerates in the middle, then slows at the end */
+}
+
+/* the bottom two css items go together as an example of a TRANSITION. This means something is going from one state to another
+ (when you hover over a plant)  */
+.plant {
+	transition: width 2s, height 2s, background-color 1s;  /* backgound-color is how long it takes to get to full color when overing  */
+}
+
+.plant:hover {
+	width: 200px;
+	height: 200px;
+	background-color: goldenrod;
 }
