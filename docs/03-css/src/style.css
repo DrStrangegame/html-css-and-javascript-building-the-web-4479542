@@ -34,9 +34,11 @@ h1:hover {
 }
 
 .plant-holder {
-	position: relative;
+	position: relative;   /* relative positioned element that is positioned within an absolute-positioned container.
+	The resultant behavior is that the side bar containers are pinned left and right, and the plant-holder is nested, adjusting
+	itself within the side bars, giving space for the plants to be placed in a vertical row.  */
 	height: 13%;
-	left: -10px;
+	left: -10px;     /* moving away from it's relative ancestor by that amount */
 }
 
 .plant {
