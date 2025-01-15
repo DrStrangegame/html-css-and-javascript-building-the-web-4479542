@@ -1,4 +1,3 @@
-
 /* below, a function takes an argument (in this case, an HTML element called 'terrariumElement') and makes it draggable by the
 functionality of the function  */
   // pos1 and pos2 will store the change in cursor position on the x and Y axis.
@@ -7,12 +6,12 @@ function dragElement(terrariumElement) {
     let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
     terrariumElement.onpointerdown = pointerDrag;  /* event listener. Triggered when user presses a pointer button (ex: mouse click)
     on the Element.*/
-}
-
-dragElement(document.getElementById('plant1'));  /*document.getElementById looks for an element w/ a matching Id in the parenthesis.
-"getElementById", which is part of the document object, looks in the DOM (Document Object Model) for an element of a particular ID, as in the
-case of our plants. */
-dragElement(document.getElementById('plant2'));
+/* Since dragElement is storing these 4 variables, we'll want to make dragElement the outer function. Basically, we want our code to allow
+all functions to have access to these four position variables. This is where "Closures" come in.
+The closing curly brace was originally below. I removed it, and re-added it at the bottom (after the stopElementDrag function).
+By doing that, now all of my inner functions (below) are inside of the "dragElement" outer function. We've successfully created "closure".
+See below for more info on 'Closures'. */
+/*  }  */
 
 function pointerDrag(e) {  /* takes an event object (e) as it's parameter. It contains info about the event that triggered the function
 In this case, the event is a pointer or mouse press.
@@ -54,6 +53,27 @@ function stopElementDrag() {  /* This function is responsible for stopping the d
         longer be called when the mouse moves. This really means that the element will stay in its new position, and no further updates
         to its position will be made until a new drag operation is initiated.*/
     }
+}
+
+/* these functions below need to be outside of the outer function at the top.
+document.getElementById looks for an element w/ a matching Id in the parenthesis.
+"getElementById", which is part of the document object, looks in the DOM (Document Object Model) for an element of a particular ID, as in the
+case of our plants. */
+dragElement(document.getElementById('plant1'));
+dragElement(document.getElementById('plant2'));
+dragElement(document.getElementById('plant3'));
+dragElement(document.getElementById('plant4'));
+dragElement(document.getElementById('plant5'));
+dragElement(document.getElementById('plant6'));
+dragElement(document.getElementById('plant7'));
+dragElement(document.getElementById('plant8'));
+dragElement(document.getElementById('plant9'));
+dragElement(document.getElementById('plant10'));
+dragElement(document.getElementById('plant11'));
+dragElement(document.getElementById('plant12'));
+dragElement(document.getElementById('plant13'));
+dragElement(document.getElementById('plant14'));
+
 
 
 /* ****** Event listeners are functions that wait for specific events to occur and then execute code in response  *******/
@@ -63,39 +83,20 @@ function stopElementDrag() {  /* This function is responsible for stopping the d
      4. Adding an event listener: This is a crucial step to attach an event listener to a particular element.
 */
 
+/* ***** Closures ************/
+/* Allows an inner function to access variables from its outer function; useful for managing state and keeping track of data over time. 
+Closures are functions that remembers the variables from the place where it was created; even when the function is executed in
+a different context. 
+    Like a backpack - When the function is created, it packs some variables in its backpack. No matter where the function goes, it
+    carries those variables with it.
+Why do we need closures??
+    1. Asynchronous operations.
+    2. Event listeners.
 
+Examples:
+    1. Track postion of mouse - We need to keep track of the position of the mouse.
+    2. track element while its being dragged (where element is dragged).
 
-/* Original content
-function dragElement(terrariumElement) {
-    let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-    terrariumElement.onpointerdown = pointerDrag;
-
-    function pointerDrag(e) {
-        e.preventDefault();
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        document.onpointermove = elementDrag;
-        document.onpointerup = stopElementDrag;
-    }
-
-    function elementDrag(e) {
-        pos1 = pos3 - e.clientX;
-        pos2 = pos4 - e.clientY;
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        terrariumElement.style.top = (terrariumElement.offsetTop - pos2) + 'px';
-        terrariumElement.style.left = (terrariumElement.offsetLeft - pos1) + 'px';
-    }
-
-    function stopElementDrag() {
-        document.onpointerup = null;
-        document.onpointermove = null;
-    }
-}
-
-document.querySelectorAll(".plant").forEach((plant) => {
-  plant.onpointerdown = function(){
-    dragElement(plant);
-  };
-});
+So we need to keep track of some state between the start and end of this operation. This is where our closure will be useful.
+*/
 */
