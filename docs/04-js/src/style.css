@@ -1,4 +1,163 @@
+body {
+	font-family: helvetica, arial, sans-serif;
+}
 
+h1 {
+	color: #3508fa;
+	text-align: center;
+	/* below, I am using an inline font-family so that I dont inherit the one for the body shown above.
+	The reason I would inherit the "body" font-family normally is because "h1" is created as a child of the "body"
+	in the index.html file. */
+	font-family: "Lobster", cursive;
+}
+
+h1:hover {
+	color: hotpink;
+}
+
+#left-container {
+	left: 0px;
+	/* 0 pixels away from left edge  */
+}
+
+#right-container {
+	right: 0px;
+	/* 0 pixels away from right edge  */
+}
+
+.container {
+	/* this is the containers for both left and right for the plants  */
+	background-color: #eee;
+	width: 15%;
+	/* ex: 15% - percentage used, since its a percentage of the total area. This works well if someone uses a smart phone
+	or table to view, since it automatically adjusts based on the percentage. If you try using px (such as 250px), it would look 
+	good on a webpage, but horrible on a phone.*/
+	top: 0px;
+	position: absolute;
+	height: 100%;
+	padding: 10px;
+}
+
+.plant-holder {
+	position: relative;
+	/* relative positioned element that is positioned within an absolute-positioned container.
+	The resultant behavior is that the side bar containers are pinned left and right, and the plant-holder is nested, adjusting
+	itself within the side bars, giving space for the plants to be placed in a vertical row.  */
+	height: 13%;
+	left: -10px;
+	/* moving away from it's relative ancestor by that amount */
+}
+
+.plant {
+	/* This is styling the plant pic and box, since the pic is basically a box with a plant  */
+	position: absolute;
+	max-width: 150%;
+	max-height: 150%;
+	z-index: 2;
+}
+
+.jar-walls {
+	height: 80%;
+	width: 60%;
+	background: #d1e1df;
+	border-radius: 1rem;
+	position: absolute;
+	bottom: 0.5%;
+	left: 20%;
+	opacity: 0.5;
+	/* make more opaque (see through) or less  */
+	z-index: 1;
+	/*  Can be 1 or -1. If negative, it makes the element go behind an existing element. If positive, then it
+	will be in front of an existing item (not blocked), like the page itself (the existing item).  */
+}
+
+.jar-top {
+	width: 50%;
+	height: 5%;
+	background: #d1e1df;
+	position: absolute;
+	bottom: 80.5%;
+	left: 25%;
+	opacity: 0.7;
+	z-index: 1;
+}
+
+.jar-bottom {
+	width: 50%;
+	height: 1%;
+	background: #d1e1df;
+	position: absolute;
+	bottom: 0%;
+	left: 25%;
+	opacity: 0.7;
+}
+
+.dirt {
+	width: 60%;
+	height: 5%;
+	background: #3a241d;
+	position: absolute;
+	border-radius: 0 0 1rem 1rem;
+	bottom: 1%;
+	left: 20%;
+	opacity: 0.7;
+	z-index: -1;
+}
+
+.jar-glossy-long {
+	width: 3%;
+	height: 20%;
+	border-radius: 2rem;
+	/* curvature of the border   */
+	background: #ddfbff;
+	position: absolute;
+	bottom: 20%;
+	left: 5%;
+}
+
+.jar-glossy-short {
+	width: 3%;
+	height: 5%;
+	border-radius: 2rem;
+	background: #ddfbff;
+	position: absolute;
+	bottom: 45%;
+	left: 5%;
+}
+
+/*Define an animation to use */
+@keyframes slide-in {
+	0% {
+		transform: translateX(-100%);
+		/* sliding in from the far left (off screen)  */
+	}
+
+	100% {
+		transform: translateX(0);
+	}
+}
+
+/* Apply the animation to an element */
+.plant {
+	animation: slide-in 2s ease-in-out;
+	/* ease-in-out means it starts slow, accelerates in the middle, then slows at the end */
+}
+
+/* the bottom two css items go together as an example of a TRANSITION. This means something is going from one state to another
+ (when you hover over a plant)  */
+.plant {
+	transition: width 2s, height 2s, background-color 1s;
+	/* backgound-color is how long it takes to get to full color when overing  */
+}
+
+.plant:hover {
+	width: 200px;
+	height: 200px;
+	background-color: goldenrod;
+}
+
+
+/* Original Content
 body {
 	font-family: helvetica, arial, sans-serif;
 }
@@ -102,3 +261,4 @@ h1 {
 	bottom: 45%;
 	left: 5%;
 }
+*/
